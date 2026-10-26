@@ -1,21 +1,28 @@
-<!-- Innerecode: продающий одностраничник для Taplink (HTML-блок).
-     Везде, где стоит [ЗАМЕНИ], вставь свой текст с сайта. -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#020a10">
+<title>Innerecode</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
+
 .ic{--deep:#031a22;--night:#020a10;--ice:#dff1ff;--soft:#b5d3e6;--glow:#8fd0ff;--ember:#ff9d57;
   --bg-img:none; /* [ЗАМЕНИ] по желанию: --bg-img:url(ссылка на картинку); */
-  position:relative;overflow:hidden;padding:52px 20px 44px;border-radius:24px;color:var(--ice);
+  position:relative;overflow:hidden;min-height:100vh;padding:56px 22px 48px;border-radius:0;color:var(--ice);
   font-family:'Manrope',system-ui,sans-serif;text-align:center;
   background:var(--bg-img) center/cover no-repeat,radial-gradient(ellipse at 50% 10%,#0d3a4a 0%,var(--deep) 40%,var(--night) 100%)}
 .ic *{box-sizing:border-box}
 .ic::before{content:"";position:absolute;inset:0;pointer-events:none;
   background-image:radial-gradient(1.2px 1.2px at 12% 6%,#fff 99%,transparent),radial-gradient(1px 1px at 78% 14%,#fff 99%,transparent),radial-gradient(1.6px 1.6px at 90% 30%,var(--ember) 99%,transparent),radial-gradient(1px 1px at 20% 44%,#cfe8ff 99%,transparent),radial-gradient(1.4px 1.4px at 6% 62%,var(--ember) 99%,transparent),radial-gradient(1px 1px at 84% 70%,#fff 99%,transparent),radial-gradient(1.2px 1.2px at 40% 86%,#cfe8ff 99%,transparent),radial-gradient(1px 1px at 92% 94%,#fff 99%,transparent)}
 .ic>*{position:relative}
-.ic section{max-width:380px;margin:0 auto 52px}
+.ic section{max-width:440px;margin:0 auto 52px}
 .ic h1,.ic h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;margin:0}
-.ic h1{font-size:40px;line-height:1.08;letter-spacing:.04em;text-shadow:0 0 28px rgba(143,208,255,.5)}
-.ic h2{font-size:30px;line-height:1.15;margin-bottom:20px;text-shadow:0 0 20px rgba(143,208,255,.35)}
-.ic p{margin:0 0 14px;font-size:15px;line-height:1.65;font-weight:300;color:var(--soft)}
+.ic h1{font-size:44px;line-height:1.08;letter-spacing:.04em;text-shadow:0 0 28px rgba(143,208,255,.5)}
+.ic h2{font-size:32px;line-height:1.15;margin-bottom:20px;text-shadow:0 0 20px rgba(143,208,255,.35)}
+.ic p{margin:0 0 14px;font-size:17px;line-height:1.65;font-weight:300;color:var(--soft)}
 
 /* светящееся ядро с орбитами */
 .ic-core{position:relative;width:130px;height:130px;margin:0 auto 30px}
@@ -28,7 +35,7 @@
 @keyframes ics{to{transform:rotateX(68deg) rotateZ(360deg)}}
 
 /* кнопка */
-.ic-btn{display:block;padding:17px 22px;border-radius:999px;text-decoration:none;color:#fff;font-size:16px;font-weight:500;
+.ic-btn{display:block;padding:19px 22px;border-radius:999px;text-decoration:none;color:#fff;font-size:18px;font-weight:500;
   background:linear-gradient(135deg,rgba(143,208,255,.35),rgba(255,157,87,.28));border:1px solid rgba(255,200,150,.6);
   box-shadow:0 0 24px rgba(143,208,255,.25);transition:box-shadow .35s}
 .ic-btn:hover,.ic-btn:focus-visible{box-shadow:0 0 38px rgba(255,170,110,.55);outline:none}
@@ -41,7 +48,7 @@
 
 /* что получишь: список со светящимися точками */
 .ic-list{list-style:none;margin:0;padding:0;text-align:left}
-.ic-list li{position:relative;padding:0 0 16px 28px;font-size:15px;line-height:1.55;font-weight:300;color:var(--soft)}
+.ic-list li{position:relative;padding:0 0 16px 28px;font-size:17px;line-height:1.55;font-weight:300;color:var(--soft)}
 .ic-list li::before{content:"";position:absolute;left:4px;top:7px;width:7px;height:7px;border-radius:50%;background:var(--ember);box-shadow:0 0 10px 2px rgba(255,157,87,.7)}
 
 /* тариф */
@@ -51,15 +58,17 @@
 
 /* FAQ */
 .ic details{text-align:left;border-bottom:1px solid rgba(160,215,255,.2);padding:14px 0}
-.ic summary{cursor:pointer;font-size:15px;font-weight:400;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.ic summary{cursor:pointer;font-size:17px;font-weight:400;list-style:none;display:flex;justify-content:space-between;gap:12px}
 .ic summary::-webkit-details-marker{display:none}
 .ic summary::after{content:"+";color:var(--ember);font-size:20px;line-height:1;transition:transform .3s}
 .ic details[open] summary::after{transform:rotate(45deg)}
 .ic details p{margin:10px 0 0}
 
-.ic-foot{font:italic 300 18px/1.5 'Cormorant Garamond',Georgia,serif;color:#9fc0d4;margin-top:8px}
+.ic-foot{font:italic 300 20px/1.5 'Cormorant Garamond',Georgia,serif;color:#9fc0d4;margin-top:8px}
 @media (prefers-reduced-motion:reduce){.ic-core i,.ic-orbit{animation:none}}
 </style>
+</head>
+<body>
 
 <div class="ic">
 
@@ -125,3 +134,5 @@
 
   <p class="ic-foot">Ты не ищешь себя. Ты вспоминаешь.</p><!-- [ЗАМЕНИ] или убери -->
 </div>
+</body>
+</html>
