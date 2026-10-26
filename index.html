@@ -104,6 +104,16 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
 .ic-wave i:nth-child(5),.ic-wave i:nth-child(7){height:56px;animation-delay:.1s}
 .ic-wave i:nth-child(6){height:64px;animation-delay:0s}
 @keyframes icw{0%,100%{transform:scaleY(.12);opacity:.45}50%{transform:scaleY(1);opacity:1}}
+/* тарифы */
+.ic-mini{width:76px;height:76px;margin:0 auto 38px}
+.ic-mini .ic-orbit{inset:-12px}
+.ic-plan{display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;margin-bottom:16px}
+.ic-plan .lt{flex:1;min-width:0}
+.ic-plan .nm{font:300 28px/1.1 'Cormorant Garamond',Georgia,serif;color:#fff;text-shadow:0 0 18px rgba(143,208,255,.4)}
+.ic-plan .ds{margin-top:10px;font-size:13px;line-height:1.5;font-weight:300;color:#8fb2c6}
+.ic-plan .rt{flex:none;text-align:center}
+.ic-plan .pr{font:400 28px/1 'Cormorant Garamond',Georgia,serif;color:#fff;margin-bottom:12px;text-shadow:0 0 16px rgba(255,157,87,.45)}
+.ic-join{padding:13px 24px;font-size:14px;letter-spacing:.1em}
 .ic-foot{font:italic 300 20px/1.5 'Cormorant Garamond',Georgia,serif;color:#9fc0d4;margin-top:8px}
 .ic a,.ic summary,.ic details{-webkit-tap-highlight-color:transparent;outline:none;-webkit-user-select:none;user-select:none}
 .ic a:focus,.ic summary:focus{outline:none}
@@ -177,19 +187,17 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
     <div class="ic-card"><b>Практикуешь</b><p>Слушаешь аудиосессии в наушниках в своём ритме. Достаточно 15–20 минут в день, чтобы запустить глубокую трансформацию ума и тела.</p></div>
   </section>
 
-  <!-- 5. Об авторе -->
-  <section>
-    <h2>Обо мне</h2>
-    <p>[ЗАМЕНИ] Пара тёплых предложений: кто ты, почему создала Innerecode и чем твой подход отличается.</p>
-  </section>
-
-  <!-- 6. Тариф -->
+  <!-- 5. Тарифы -->
   <section id="buy">
-    <div class="ic-price">
-      <p style="margin:0">Доступ к Innerecode</p><!-- [ЗАМЕНИ] название тарифа -->
-      <div class="sum">0 ₽</div><!-- [ЗАМЕНИ] цена -->
-      <a class="ic-btn" href="#">Оплатить и войти</a><!-- [ЗАМЕНИ] ссылка на оплату -->
-      <p class="ic-note">[ЗАМЕНИ] Условия: срок доступа, способы оплаты</p>
+    <h2>Plans</h2>
+    <div class="ic-core ic-mini"><span class="ic-orbit"></span><i></i></div>
+    <div class="ic-price ic-plan">
+      <div class="lt"><div class="nm">6-Month Access</div><div class="ds">Regular updates &amp; new tracks added</div></div>
+      <div class="rt"><div class="pr">$149.00</div><a class="ic-btn ic-join" href="#">JOIN NOW</a></div><!-- [ЗАМЕНИ] ссылка на оплату 6 месяцев -->
+    </div>
+    <div class="ic-price ic-plan">
+      <div class="lt"><div class="nm">1-Year Access</div><div class="ds">Regular updates &amp; new tracks added</div></div>
+      <div class="rt"><div class="pr">$249.00</div><a class="ic-btn ic-join" href="#">JOIN NOW</a></div><!-- [ЗАМЕНИ] ссылка на оплату 1 год -->
     </div>
   </section>
 
@@ -208,7 +216,6 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
       <p>Crucial note: Keep listening to the affirmations no matter what, until your state stabilizes and becomes fully harmonious. The universe will begin to intensely nudge you toward the right path for your soul. The key is learning to distinguish the voice of your Higher Self from the noise of inherited scripts and external conditioning.</p>
       <p>If your emotional state feels overwhelming or does not improve, please pause the practice and reach out to a qualified mental health professional.</p>
     </details>
-    <details><summary>What if I have more questions?</summary><p>[ЗАМЕНИ] Контакт для связи.</p></details>
   </section>
 
   <p class="ic-foot">Ты не ищешь себя. Ты вспоминаешь.</p><!-- [ЗАМЕНИ] или убери -->
