@@ -121,8 +121,13 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
 .ic-sub li::before{display:none!important}
 .ic-intro{margin:0 0 18px!important;color:var(--ice)!important}
 .ic h2 + .ic-intro{padding-top:18px}
-.ic-pain .ic-card{padding:16px 18px 4px;margin-bottom:14px;background:rgba(3,14,20,.45);border:1px solid rgba(190,230,255,.26);box-shadow:0 0 14px rgba(143,208,255,.05)}
+.ic-pain .ic-card{padding:16px 18px 4px;margin-bottom:14px;}
 .ic-pain .ic-card b{font-size:21px;margin-bottom:5px}
+.ic-card{position:relative}
+.ic-card:nth-of-type(1){z-index:4}
+.ic-card:nth-of-type(2){z-index:3}
+.ic-card:nth-of-type(3){z-index:2}
+.ic-card:nth-of-type(4){z-index:1}
 .ic-pain .ic-card p{font-size:15px;line-height:1.55}
 .ic-close{position:relative;margin:34px 0 0!important;padding-top:26px;font:italic 300 22px/1.45 'Cormorant Garamond',Georgia,serif!important;color:#fff!important;text-shadow:0 0 18px rgba(143,208,255,.5)}
 .ic-close::before{content:"";position:absolute;top:0;left:50%;width:56px;height:1px;margin-left:-28px;background:linear-gradient(90deg,transparent,var(--ember),transparent);box-shadow:0 0 10px rgba(255,157,87,.7)}
