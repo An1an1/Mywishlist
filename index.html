@@ -24,7 +24,7 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
   --bg-img:none; /* [ЗАМЕНИ] по желанию: --bg-img:url(ссылка на картинку); */
   position:relative;overflow:hidden;min-height:100vh;padding:56px 22px 48px;border-radius:0;color:var(--ice);
   font-family:'Manrope',system-ui,sans-serif;text-align:center;
-  background:var(--bg-img) center/cover no-repeat,linear-gradient(180deg,#041a22 0%,var(--night) 100%)}
+  background:var(--bg-img) center/cover no-repeat,#020a10}
 .ic *{box-sizing:border-box}
 .ic::before{content:"";position:absolute;inset:0;pointer-events:none;
   background-image:radial-gradient(1.2px 1.2px at 12% 6%,#fff 99%,transparent),radial-gradient(1px 1px at 78% 14%,#fff 99%,transparent),radial-gradient(1.6px 1.6px at 90% 30%,var(--ember) 99%,transparent),radial-gradient(1px 1px at 20% 44%,#cfe8ff 99%,transparent),radial-gradient(1.4px 1.4px at 6% 62%,var(--ember) 99%,transparent),radial-gradient(1px 1px at 84% 70%,#fff 99%,transparent),radial-gradient(1.2px 1.2px at 40% 86%,#cfe8ff 99%,transparent),radial-gradient(1px 1px at 92% 94%,#fff 99%,transparent)}
@@ -199,7 +199,7 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
 .ic-gonote{margin:30px 0 0!important;font-size:15px!important;color:#9fc0d4!important}
 
 
-/* разделитель перед FAQ */
+/* разделитель (перед Plans и перед FAQ) */
 .ic-sep{position:relative;max-width:440px;height:1px;margin:20px auto 68px;background:linear-gradient(90deg,transparent,rgba(160,215,255,.35),transparent)}
 .ic-sep::after{content:"";position:absolute;left:50%;top:-3px;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:var(--ember);box-shadow:0 0 12px 2px rgba(255,157,87,.7)}
 /* FAQ: список и заметка */
@@ -338,6 +338,8 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
       <li data-n="3"><h3>Автоматическое самопрограммирование</h3><p>Новые установки становятся твоей новой базовой прошивкой. Тебе больше не нужно заставлять себя думать позитивно — твой разум на автомате начинает принимать уверенные решения, выбирать здоровые отношения и действовать из состояния внутренней силы.</p></li>
     </ol>
   </section>
+
+  <div class="ic-sep" aria-hidden="true"></div>
 
   <!-- 5. Тарифы -->
   <section id="buy">
