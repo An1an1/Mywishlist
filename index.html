@@ -1,11 +1,19 @@
-<!-- Inner Recode: блок для Taplink (HTML). Вставляется целиком в блок «HTML». -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#020a10">
+<title>Innerecode</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-.ic,.ic *,.ic *::before,.ic *::after{-webkit-tap-highlight-color:rgba(0,0,0,0)!important;-webkit-touch-callout:none}
-.ic *{outline:0!important;-webkit-user-select:none;user-select:none}
+*,*::before,*::after{-webkit-tap-highlight-color:rgba(0,0,0,0)!important;-webkit-touch-callout:none}
+html,body{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+a,summary,button,details,.ic *{outline:0!important;-webkit-user-select:none;user-select:none}
 .ic p,.ic li{-webkit-user-select:text;user-select:text}
-.ic a:focus,.ic summary:focus,.ic a:active,.ic summary:active{outline:0!important;background-color:transparent}
-.ic ::selection{background:rgba(143,208,255,.25);color:#fff}
+a:focus,summary:focus,a:active,summary:active{outline:0!important;background-color:transparent}
+::selection{background:rgba(143,208,255,.25);color:#fff}
+html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
 
 /* переменные для анимации кнопок */
 @property --icA{syntax:'<angle>';inherits:false;initial-value:0deg}
@@ -14,7 +22,7 @@
 
 .ic{--deep:#031a22;--night:#020a10;--ice:#dff1ff;--soft:#b5d3e6;--glow:#8fd0ff;--ember:#ff9d57;
   --bg-img:none; /* [ЗАМЕНИ] по желанию: --bg-img:url(ссылка на картинку); */
-  position:relative;overflow:hidden;padding:56px 22px 48px;border-radius:0;color:var(--ice);
+  position:relative;overflow:hidden;min-height:100vh;padding:56px 22px 48px;border-radius:0;color:var(--ice);
   font-family:'Manrope',system-ui,sans-serif;text-align:center;
   background:var(--bg-img) center/cover no-repeat,linear-gradient(180deg,#041a22 0%,var(--night) 100%)}
 .ic *{box-sizing:border-box}
@@ -173,6 +181,9 @@
 
 @media (prefers-reduced-motion:reduce){.ic-core i,.ic-orbit{animation:none}.ic-wave i{animation:none;transform:scaleY(.6);opacity:.8}.ic-btn,.ic-btn::before,.ic-btn::after{animation:none}}
 </style>
+</head>
+<body>
+
 <div class="ic">
 
   <!-- 1. Первый экран -->
@@ -235,17 +246,17 @@
     <div class="ic-aud">
       <button class="ic-play" type="button" aria-label="Play"></button>
       <div class="tx"><div class="tt">Self-Love &amp; Inner Anchor</div><div class="ds">Deep Transformation</div><div class="ic-bar"><i></i></div><div class="ic-time">0:00 / 0:00</div></div>
-      <audio preload="metadata" src="https://an1an1.github.io/ИМЯ-РЕПО/audio/preview-1.mp3"></audio><!-- [ЗАМЕНИ] полная ссылка на файл на GitHub Pages -->
+      <audio preload="metadata" src="audio/preview-1.mp3"></audio><!-- [ЗАМЕНИ] путь к файлу -->
     </div>
     <div class="ic-aud">
       <button class="ic-play" type="button" aria-label="Play"></button>
       <div class="tx"><div class="tt">Heart Chakra Awakening</div><div class="ds">Energy Cleansing</div><div class="ic-bar"><i></i></div><div class="ic-time">0:00 / 0:00</div></div>
-      <audio preload="metadata" src="https://an1an1.github.io/ИМЯ-РЕПО/audio/preview-2.mp3"></audio><!-- [ЗАМЕНИ] полная ссылка на файл на GitHub Pages -->
+      <audio preload="metadata" src="audio/preview-2.mp3"></audio><!-- [ЗАМЕНИ] путь к файлу -->
     </div>
     <div class="ic-aud">
       <button class="ic-play" type="button" aria-label="Play"></button>
       <div class="tx"><div class="tt">Reclaiming Suppressed Child Parts</div><div class="ds">Generational Liberation</div><div class="ic-bar"><i></i></div><div class="ic-time">0:00 / 0:00</div></div>
-      <audio preload="metadata" src="https://an1an1.github.io/ИМЯ-РЕПО/audio/preview-3.mp3"></audio><!-- [ЗАМЕНИ] полная ссылка на файл на GitHub Pages -->
+      <audio preload="metadata" src="audio/preview-3.mp3"></audio><!-- [ЗАМЕНИ] путь к файлу -->
     </div>
   </section>
 
@@ -320,3 +331,5 @@
   });
 })();
 </script>
+</body>
+</html>
