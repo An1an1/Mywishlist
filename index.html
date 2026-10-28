@@ -170,6 +170,16 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
 .ic-bar i{display:block;height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,var(--glow),var(--ember));box-shadow:0 0 10px rgba(255,157,87,.7)}
 .ic-time{margin-top:7px;font-size:11px;color:#6f93a8;letter-spacing:.04em}
 
+/* шаги: светящаяся цепочка */
+.ic-steps{list-style:none;margin:0;padding:0;text-align:left}
+.ic-steps li{position:relative;padding:0 0 34px 66px}
+.ic-steps li:last-child{padding-bottom:0}
+.ic-steps li::before{content:attr(data-n);position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:400 24px/1 'Cormorant Garamond',Georgia,serif;color:#fff;text-shadow:0 0 10px rgba(255,255,255,.6);border:1px solid rgba(255,200,150,.5);background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.35),rgba(143,208,255,.22) 55%,rgba(255,157,87,.26));box-shadow:0 0 22px rgba(143,208,255,.32)}
+.ic-steps li::after{content:"";position:absolute;left:22.5px;top:56px;bottom:8px;width:1px;background:linear-gradient(to bottom,rgba(255,157,87,.65),rgba(143,208,255,.08))}
+.ic-steps li:last-child::after{display:none}
+.ic-steps h3{margin:3px 0 9px;font:400 24px/1.2 'Cormorant Garamond',Georgia,serif;color:#fff;text-shadow:0 0 16px rgba(143,208,255,.4)}
+.ic-steps p{margin:0;font-size:15.5px;line-height:1.7}
+
 /* подвал с документами */
 .ic-legal{max-width:440px;margin:56px auto 0;padding-top:26px;border-top:1px solid rgba(160,215,255,.12);display:flex;flex-direction:column;align-items:center;gap:14px}
 .ic-legal .row{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px}
@@ -263,9 +273,21 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
   <!-- 4. Как это работает -->
   <section>
     <h2>Как это работает</h2>
-    <div class="ic-card"><b>Оплачиваешь</b><p>Выбираешь подходящий тариф и оплачиваешь доступ.</p></div>
-    <div class="ic-card"><b>Получаешь ссылку</b><p>Данные для доступа к платформе придут на твою электронную почту сразу после оплаты.</p></div>
-    <div class="ic-card"><b>Практикуешь</b><p>Слушаешь аудиосессии в наушниках в своём ритме. Достаточно 15–20 минут в день, чтобы запустить глубокую трансформацию ума и тела.</p></div>
+    <ol class="ic-steps">
+      <li data-n="1"><h3>Отключение ментального шума</h3><p>В обычной жизни твой разум постоянно занят сомнениями, тревогой и контролем. Особый ритм аудиосессий и глубина голоса мягко убаюкивают твоего «внутреннего критика». Ментальный шум затихает, и твой фокус внимания полностью перемещается из внешней суеты глубоко внутрь себя.</p></li>
+      <li data-n="2"><h3>Перезапись старых сценариев</h3><p>В этом расслабленном состоянии твоё подсознание становится максимально восприимчивым к изменениям. Голосовые сессии действуют как бережный лазер: они находят глубоко запрятанные обиды, страхи и чужие установки, аккуратно растворяют их и заменяют на сильные, созидающие программы.</p></li>
+      <li data-n="3"><h3>Автоматическое самопрограммирование</h3><p>Новые установки становятся твоей новой базовой прошивкой. Тебе больше не нужно заставлять себя думать позитивно — твой разум на автомате начинает принимать уверенные решения, выбирать здоровые отношения и действовать из состояния внутренней силы.</p></li>
+    </ol>
+  </section>
+
+  <!-- 4б. Как начать трансформацию -->
+  <section>
+    <h2>Как начать трансформацию</h2>
+    <ol class="ic-steps">
+      <li data-n="1"><h3>Оплачиваешь</h3><p>Выбираешь подходящий тариф и оплачиваешь доступ.</p></li>
+      <li data-n="2"><h3>Получаешь ссылку</h3><p>Данные для доступа к платформе придут на твою электронную почту сразу после оплаты.</p></li>
+      <li data-n="3"><h3>Практикуешь</h3><p>Слушаешь аудиосессии в наушниках в своём ритме. Достаточно 15–20 минут в день, чтобы запустить глубокую трансформацию ума и тела. Можно просто слушать, расслабляясь, или повторять за голосом.</p></li>
+    </ol>
   </section>
 
   <!-- 5. Тарифы -->
