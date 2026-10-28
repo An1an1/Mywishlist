@@ -198,6 +198,16 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
 .ic-go p{margin:0;font-size:13px;line-height:1.5}
 .ic-gonote{margin:30px 0 0!important;font-size:15px!important;color:#9fc0d4!important}
 
+
+/* разделитель перед FAQ */
+.ic-sep{position:relative;max-width:440px;height:1px;margin:20px auto 68px;background:linear-gradient(90deg,transparent,rgba(160,215,255,.35),transparent)}
+.ic-sep::after{content:"";position:absolute;left:50%;top:-3px;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:var(--ember);box-shadow:0 0 12px 2px rgba(255,157,87,.7)}
+/* FAQ: список и заметка */
+.ic details .ic-list{margin-top:14px}
+.ic details .ic-list li{font-size:15px;line-height:1.6;padding-bottom:12px}
+.ic details .ic-list li b{color:#fff;font-weight:500}
+.ic details .ic-warn{margin-top:8px;padding:12px 14px;border-left:2px solid var(--ember);border-radius:0 12px 12px 0;background:rgba(180,220,255,.05)}
+
 /* подвал с документами */
 .ic-legal{max-width:440px;margin:56px auto 0;padding-top:26px;border-top:1px solid rgba(160,215,255,.12);display:flex;flex-direction:column;align-items:center;gap:14px}
 .ic-legal .row{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px}
@@ -349,10 +359,12 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
     <ol class="ic-go">
       <li data-n="1"><h3>Оплата</h3><p>Выбираешь тариф и оплачиваешь доступ</p></li>
       <li data-n="2"><h3>Ссылка</h3><p>Доступ придёт на почту сразу после оплаты</p></li>
-      <li data-n="3"><h3>Практика</h3><p>15–20 минут в день в наушниках</p></li>
+      <li data-n="3"><h3>Практика</h3><p>В наушниках, в своём ритме</p></li>
     </ol>
-    <p class="ic-gonote">Слушай аудиосессии в своём ритме, чтобы запустить глубокую трансформацию ума и тела. Можно просто слушать, расслабляясь или повторять за голосом.</p>
+    <p class="ic-gonote">Достаточно 15–20 минут в день, чтобы запустить глубокую трансформацию ума и тела. Можно просто слушать, расслабляясь, или повторять за голосом.</p>
   </section>
+
+  <div class="ic-sep" aria-hidden="true"></div>
 
   <!-- 6. Вопросы -->
   <section>
@@ -360,14 +372,14 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
     <details><summary>How do I access the affirmations?</summary><p>Immediately after a successful payment, you will receive an email (sent to the address you provided at checkout) containing your login credentials and a link to the platform where all the audio tracks are hosted.</p></details>
     <details><summary>How often should I listen to the affirmations?</summary><p>Listen as often as you feel you need to. Keep listening until you feel completely calm and neutral about the topic.</p></details>
     <details><summary>What sensations might occur during this process?</summary>
-      <p>Initiating deep subconscious work can sometimes trigger temporary emotional purging — this is a normal sign that your psyche is successfully clearing out old blocks.</p>
-      <p>Be prepared for the following adjustments:</p>
-      <p>• You may experience vivid dreams or nightmares. This is completely normal. It is your psyche’s way of filtering out toxic memory fragments and processing deep-rooted fears while you sleep.</p>
-      <p>• People from your past may suddenly resurface. This is normal. It usually indicates that an old emotional cord is snapping. It is best not to re-engage or reach out to them.</p>
-      <p>• Irritability and «emotional rollercoasters» might occur. This is an entirely natural process. As your subconscious releases deep-seated blocks, trapped emotions rise to the surface. You might swing from euphoria to sadness or frustration for no obvious reason. Please treat yourself with ultimate tenderness, grace, and love during these integration days.</p>
-      <p>• You might encounter triggering situations with loved ones. For example, temporary friction in relationships with your parents or partner. When this happens, take time to reflect and consciously step out of the emotional loop.</p>
-      <p>Crucial note: Keep listening to the affirmations no matter what, until your state stabilizes and becomes fully harmonious. The universe will begin to intensely nudge you toward the right path for your soul. The key is learning to distinguish the voice of your Higher Self from the noise of inherited scripts and external conditioning.</p>
-      <p>If your emotional state feels overwhelming or does not improve, please pause the practice and reach out to a qualified mental health professional.</p>
+      <p>Deep subconscious work can stir things up for a while. Here is what some people notice:</p>
+      <ul class="ic-list">
+        <li><b>Vivid dreams</b> — your mind processing old fears and memories during sleep.</li>
+        <li><b>People from the past resurfacing</b> — an old emotional connection being released.</li>
+        <li><b>Mood swings</b> — from euphoria to sadness or irritability, often for no obvious reason. Be extra gentle with yourself in these days.</li>
+        <li><b>Tension with loved ones</b> — for example, with parents or a partner. Take a moment to reflect and step out of the emotional loop.</li>
+      </ul>
+      <p class="ic-warn">Listen at a pace that feels comfortable. Over time, it becomes easier to tell the voice of your Higher Self from inherited scripts. If your emotional state feels overwhelming or does not improve, pause the practice and reach out to a qualified mental health professional.</p>
     </details>
     <details><summary>What should I do if my payment doesn’t go through?</summary><p>Please contact us directly at <a class="ic-mail" href="mailto:info.innerecode@gmail.com">info.innerecode@gmail.com</a>, and we will assist you right away.</p></details>
   </section>
