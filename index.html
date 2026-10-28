@@ -246,17 +246,17 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
     <div class="ic-aud">
       <button class="ic-play" type="button" aria-label="Play"></button>
       <div class="tx"><div class="tt">Return to Self &amp; Inner Light</div><div class="ds">Deep Transformation</div><div class="ic-bar"><i></i></div><div class="ic-time">0:00 / 0:00</div></div>
-      <audio preload="none" src="https://www.dropbox.com/scl/fi/8gk972y87ujdggb4fr51a/Return-to-self-and-inner-light.m4a?rlkey=non2o1182h9g57itq9sris8du&amp;st=knua62o2&amp;raw=1"></audio>
+      <audio preload="none" src="audio/preview-1.m4a"></audio>
     </div>
     <div class="ic-aud">
       <button class="ic-play" type="button" aria-label="Play"></button>
       <div class="tx"><div class="tt">Universal Protection</div><div class="ds">Energy Cleansing &amp; Protection</div><div class="ic-bar"><i></i></div><div class="ic-time">0:00 / 0:00</div></div>
-      <audio preload="none" src="https://www.dropbox.com/scl/fi/48zhdie4qpegtich82yyz/Universal-protection.m4a?rlkey=kn5bwz0mqgqsruetobv7a7agh&amp;st=kshqbc48&amp;raw=1"></audio>
+      <audio preload="none" src="audio/preview-2.m4a"></audio>
     </div>
     <div class="ic-aud">
       <button class="ic-play" type="button" aria-label="Play"></button>
       <div class="tx"><div class="tt">Growing Up the Child Parts</div><div class="ds">Reclaiming Love &middot; Generational Liberation</div><div class="ic-bar"><i></i></div><div class="ic-time">0:00 / 0:00</div></div>
-      <audio preload="none" src="https://www.dropbox.com/scl/fi/yjat1pvpi43ru8exelbrc/Growing-up-the-child-parts.Reclaiming-love.m4a?rlkey=4drhf6wbjq8vj9u01ge9583xi&amp;st=n0ryv2gh&amp;raw=1"></audio>
+      <audio preload="none" src="audio/preview-3.m4a"></audio>
     </div>
   </section>
 
@@ -317,12 +317,16 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
   function fmt(t){if(!isFinite(t))return'0:00';var m=Math.floor(t/60),s=Math.floor(t%60);return m+':'+(s<10?'0':'')+s}
   document.querySelectorAll('.ic-aud').forEach(function(c){
     var a=c.querySelector('audio'),b=c.querySelector('.ic-play'),bar=c.querySelector('.ic-bar'),f=bar.querySelector('i'),t=c.querySelector('.ic-time');
-    function upd(){f.style.width=(a.duration?a.currentTime/a.duration*100:0)+'%';t.textContent=fmt(a.currentTime)+' / '+fmt(a.duration)}
+    var raf=0;
+    function pos(){f.style.width=(a.duration?a.currentTime/a.duration*100:0)+'%'}
+    function upd(){pos();t.textContent=fmt(a.currentTime)+' / '+fmt(a.duration)}
+    function loop(){pos();raf=requestAnimationFrame(loop)}
     a.addEventListener('loadedmetadata',upd);
     a.addEventListener('timeupdate',upd);
-    a.addEventListener('play',function(){c.classList.add('is-playing')});
-    a.addEventListener('pause',function(){c.classList.remove('is-playing')});
-    a.addEventListener('ended',function(){a.currentTime=0;upd()});
+    a.addEventListener('play',function(){c.classList.add('is-playing');cancelAnimationFrame(raf);raf=requestAnimationFrame(loop)});
+    a.addEventListener('pause',function(){c.classList.remove('is-playing');cancelAnimationFrame(raf);upd()});
+    a.addEventListener('ended',function(){cancelAnimationFrame(raf);a.currentTime=0;upd()});
+    a.addEventListener('seeked',upd);
     b.addEventListener('click',function(){
       if(a.paused){if(cur&&cur!==a)cur.pause();cur=a;var p=a.play();if(p&&p.catch)p.catch(function(){})}
       else{a.pause()}
