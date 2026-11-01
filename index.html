@@ -14,6 +14,7 @@ a,summary,button,details,.ic *{outline:0!important;-webkit-user-select:none;user
 a:focus,summary:focus,a:active,summary:active{outline:0!important;background-color:transparent}
 ::selection{background:rgba(143,208,255,.25);color:#fff}
 html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth}
 
 /* переменные для анимации кнопок */
 @property --icA{syntax:'<angle>';inherits:false;initial-value:0deg}
@@ -218,7 +219,12 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
 .ic-legal a.ru:hover{opacity:.7}
 .ic-copy{font-size:11px;color:#4f6f80;margin:0}
 
-@media (prefers-reduced-motion:reduce){.ic-core i,.ic-orbit{animation:none}.ic-wave i{animation:none;transform:scaleY(.6);opacity:.8}.ic-btn,.ic-btn::before,.ic-btn::after{animation:none}}
+/* оговорка: полный текст в подвале и короткая заметка под тарифами */
+.ic .ic-disc{max-width:420px;margin:0 auto 4px;font-size:12px;line-height:1.7;font-weight:300;color:#7fa0b4;text-align:center;scroll-margin-top:24px}
+.ic .ic-disc b{font-weight:500;color:#9fc0d4}
+.ic .ic-buynote{max-width:380px;margin:20px auto 0;font-size:12.5px;line-height:1.6;color:#8fb2c6}
+
+@media (prefers-reduced-motion:reduce){.ic-core i,.ic-orbit{animation:none}.ic-wave i{animation:none;transform:scaleY(.6);opacity:.8}.ic-btn,.ic-btn::before,.ic-btn::after{animation:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -354,6 +360,7 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
       <div class="lt"><div class="nm">1-Year Access</div><div class="ds">Regular updates &amp; new tracks added</div></div>
       <div class="rt"><div class="pr">$249.00</div><a class="ic-btn ic-join" href="#">JOIN NOW</a></div><!-- [ЗАМЕНИ] ссылка на оплату 1 год -->
     </div>
+    <p class="ic-buynote">Not medical or psychological advice. Not recommended during pregnancy or for individuals with diagnosed mental health conditions. <a class="ic-mail" href="#disc">Learn more</a></p>
   </section>
 
   <!-- 5б. После оплаты (бывший «Как начать трансформацию») -->
@@ -387,14 +394,15 @@ html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
     <details><summary>What should I do if my payment doesn’t go through?</summary><p>Please contact us directly at <a class="ic-mail" href="mailto:info.innerecode@gmail.com">info.innerecode@gmail.com</a>, and we will assist you right away.</p></details>
   </section>
 
-  <!-- Подвал: документы -->
+  <!-- Подвал: оговорка и документы -->
   <div class="ic-legal">
+    <p class="ic-disc" id="disc"><b>Disclaimer.</b> Our vocal affirmation sessions are designed for deep self-reprogramming and personal development. They do not constitute medical, psychological, or psychiatric advice or treatment. Listening is not recommended for individuals who are pregnant or those with diagnosed mental health conditions. You assume full responsibility for your emotional integration process.</p>
     <div class="row">
-      <a href="https://drive.google.com/file/d/19XYjRVBjc-gnhX1DvpWvKMeCxe75tQFU/view?usp=sharing" target="_blank" rel="noopener">Terms of Service &amp; Refund Policy</a><!-- [ЗАМЕНИ] ссылка на Terms of Service & Refund Policy -->
-      <a href="https://drive.google.com/file/d/1wIHJK5z2cDO7i_jchnVZX9EK8vSBr9Za/view?usp=sharing" target="_blank" rel="noopener">Privacy Policy</a><!-- [ЗАМЕНИ] ссылка на Privacy Policy -->
+      <a href="https://drive.google.com/file/d/19XYjRVBjc-gnhX1DvpWvKMeCxe75tQFU/view?usp=sharing" target="_blank" rel="noopener">Terms of Service &amp; Refund Policy</a>
+      <a href="https://drive.google.com/file/d/1wIHJK5z2cDO7i_jchnVZX9EK8vSBr9Za/view?usp=sharing" target="_blank" rel="noopener">Privacy Policy</a>
     </div>
     <p class="ic-copy">© Inner Recode</p>
-    <a class="ru" href="https://drive.google.com/file/d/1JDNzzGCB5lC56fwZGMyBhsG5EFXgAJCB/view?usp=sharing" target="_blank" rel="noopener">Privacy Policy ru</a><!-- [ЗАМЕНИ] ссылка на Privacy Policy ru (почти невидимая) -->
+    <a class="ru" href="https://drive.google.com/file/d/1JDNzzGCB5lC56fwZGMyBhsG5EFXgAJCB/view?usp=sharing" target="_blank" rel="noopener">Privacy Policy ru</a>
   </div>
 </div>
 <script>
