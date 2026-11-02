@@ -14,7 +14,6 @@ a,summary,button,details,.ic *{outline:0!important;-webkit-user-select:none;user
 a:focus,summary:focus,a:active,summary:active{outline:0!important;background-color:transparent}
 ::selection{background:rgba(143,208,255,.25);color:#fff}
 html,body{margin:0;padding:0;background:#020a10;-webkit-text-size-adjust:100%}
-html{scroll-behavior:smooth}
 
 /* переменные для анимации кнопок */
 @property --icA{syntax:'<angle>';inherits:false;initial-value:0deg}
@@ -224,7 +223,7 @@ html{scroll-behavior:smooth}
 .ic .ic-disc b{font-weight:500;color:#9fc0d4}
 .ic .ic-buynote{max-width:380px;margin:20px auto 0;font-size:12.5px;line-height:1.6;color:#8fb2c6}
 
-@media (prefers-reduced-motion:reduce){.ic-core i,.ic-orbit{animation:none}.ic-wave i{animation:none;transform:scaleY(.6);opacity:.8}.ic-btn,.ic-btn::before,.ic-btn::after{animation:none}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){.ic-core i,.ic-orbit{animation:none}.ic-wave i{animation:none;transform:scaleY(.6);opacity:.8}.ic-btn,.ic-btn::before,.ic-btn::after{animation:none}}
 </style>
 </head>
 <body>
@@ -426,6 +425,36 @@ html{scroll-behavior:smooth}
       else{a.pause()}
     });
     bar.addEventListener('click',function(e){var r=bar.getBoundingClientRect();if(a.duration)a.currentTime=(e.clientX-r.left)/r.width*a.duration});
+  });
+})();
+
+/* медленная плавная прокрутка по якорным ссылкам (Get Access, Learn more) */
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var anim=0;
+  function ease(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
+  function cancel(){anim++}
+  window.addEventListener('wheel',cancel,{passive:true});
+  window.addEventListener('touchstart',cancel,{passive:true});
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    var id=a.getAttribute('href');
+    if(id.length<2)return;
+    a.addEventListener('click',function(e){
+      var target=document.querySelector(id);
+      if(!target)return;
+      e.preventDefault();
+      var from=window.pageYOffset,to=target.getBoundingClientRect().top+from-20;
+      if(reduce){window.scrollTo(0,to);return}
+      var dist=to-from,dur=Math.min(2600,Math.max(1400,Math.abs(dist)*0.9)),start=null,my=++anim;
+      function step(ts){
+        if(my!==anim)return;
+        if(start===null)start=ts;
+        var p=Math.min((ts-start)/dur,1);
+        window.scrollTo(0,from+dist*ease(p));
+        if(p<1)requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
   });
 })();
 </script>
