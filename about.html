@@ -28,7 +28,7 @@
 .ir-track{margin:0 0 56px}
 .ir-track:last-child{margin-bottom:12px}
 .ir h3{margin:0 0 12px;font:300 32px/1.15 'Cormorant Garamond',Georgia,serif;color:var(--ice);text-shadow:0 0 20px rgba(143,208,255,.35)}
-.ir-get{margin:0 auto 28px;max-width:430px;font-size:15.5px;line-height:1.8;font-weight:300;color:var(--soft)}
+.ir .ir-get{margin:0 auto 28px!important;max-width:430px;font-size:15.5px;line-height:1.8;font-weight:300;color:var(--soft)}
 .ir .ir-q{margin:0 auto 12px;max-width:420px;font:italic 400 23px/1.4 'Cormorant Garamond',Georgia,serif;color:#fff;text-shadow:0 0 18px rgba(143,208,255,.5)}
 
 /* thin divider between tracks */
@@ -44,9 +44,10 @@
   border:1px solid rgba(255,200,150,.4);background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.22),rgba(143,208,255,.16) 55%,rgba(255,157,87,.16));box-shadow:0 0 12px rgba(143,208,255,.18)}
 .ir-play::before{content:"";position:absolute;left:21px;top:16px;border-left:14px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;opacity:.92}
 .ir-aud.is-playing .ir-play::before{left:19px;top:17px;width:5px;height:18px;border:0;border-radius:2px;background:#fff;box-shadow:11px 0 0 #fff}
-.ir-aud .tx{flex:1;min-width:0}
-.ir-aud .tt{font:400 20px/1.25 'Cormorant Garamond',Georgia,serif;color:#fff}
-.ir-aud .ds{margin-top:3px;font-size:13px;line-height:1.4;font-weight:300;color:#8fb2c6}
+.ir-aud .ir-tx{flex:1;min-width:0;margin:0!important;padding:0!important}
+.ir-aud .ir-tt,.ir-aud .ir-ds,.ir-aud .ir-time{margin-bottom:0!important;padding:0!important}
+.ir-aud .ir-tt{font:400 20px/1.25 'Cormorant Garamond',Georgia,serif;color:#fff}
+.ir-aud .ir-ds{margin-top:3px;font-size:13px;line-height:1.4;font-weight:300;color:#8fb2c6}
 .ir-bar{position:relative;height:3px;margin-top:14px;border-radius:3px;background:rgba(160,215,255,.2);cursor:pointer}
 .ir-bar::after{content:"";position:absolute;left:0;right:0;top:-12px;bottom:-12px}
 .ir-bar i{display:block;height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,var(--glow),var(--ember));box-shadow:0 0 5px rgba(255,157,87,.35)}
@@ -152,13 +153,13 @@
     var rep=c.getAttribute('data-repeat')==='true';
     c.innerHTML=
       '<button class="ir-play" type="button" aria-label="Play"></button>'+
-      '<div class="tx"><div class="tt"></div><div class="ds"></div>'+
+      '<div class="ir-tx"><div class="ir-tt"></div><div class="ir-ds"></div>'+
       '<div class="ir-bar"><i></i></div>'+
       '<div class="ir-meta"><span class="ir-time">0:00 / 0:00</span>'+
       (rep?'<button class="ir-btn" type="button" aria-pressed="false">Repeat</button>':'')+
       '</div></div>';
-    c.querySelector('.tt').textContent=c.getAttribute('data-title')||'';
-    c.querySelector('.ds').textContent=c.getAttribute('data-desc')||'';
+    c.querySelector('.ir-tt').textContent=c.getAttribute('data-title')||'';
+    c.querySelector('.ir-ds').textContent=c.getAttribute('data-desc')||'';
 
     var a=new Audio();a.preload='metadata';a.src=c.getAttribute('data-src');
     var b=c.querySelector('.ir-play'),bar=c.querySelector('.ir-bar'),f=bar.querySelector('i'),t=c.querySelector('.ir-time'),raf=0;
