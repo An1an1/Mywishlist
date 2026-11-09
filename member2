@@ -1,4 +1,4 @@
-<!-- ===== INNER RECODE: Module 1 (Tilda, same structure as the Introduction page). Paste whole into the "Embed HTML code" block ===== -->
+<!-- ===== INNER RECODE: Module 2 (Tilda, same structure as the Introduction page). Paste whole into the "Embed HTML code" block ===== -->
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Manrope:wght@300;400;500&amp;display=swap" rel="stylesheet">
 
 <style>
@@ -131,7 +131,7 @@ html::-webkit-scrollbar{display:none}
   <!-- ===== TRACK 1: Session ===== -->
   <section class="vbm1-track">
     <h3>Universal protection<br>(Perfect for anytime or before sleep)</h3>
-    <p class="vbm1-get">Often during the day, in meditations, or in past dreams, we unconsciously "forget" and leave our attention, energy, and mental parts in foreign spaces and events.<br>This affirmation focuses on powerful protection and the restoration of your energy structure, helping build an impenetrable sphere of light around your field, automatically blocking any external pressure, and closing off foreign access and portals. Most importantly, it gathers all your scattered particles of attention and fractals from all spaces and worlds, gently returning them to the "here and now" and grounding them in the physical body for safe overnight recovery.</p>
+    <p class="vbm1-get">Often during the day, in meditations, or in past dreams, we unconsciously "forget" and leave our attention, energy, and mental parts in foreign spaces and events.<br>This affirmation focuses on powerful protection and the restoration of your energy structure, helping build an impenetrable sphere of light around your field, automatically blocking any external pressure, and closing off foreign access and portals. Most importantly, it gathers all your scattered particles of attention and fractals from all spaces and worlds, gently returning them to the "here and now" and grounding them in the physical body for safe overnight recovery</p>
 
     <div class="vbm1-aud" data-src="https://audio.innerecode.space/1.2.beauty.mp3" data-title="Session" data-desc="Affirmation session" data-repeat="true"></div>
   </section>
@@ -140,14 +140,14 @@ html::-webkit-scrollbar{display:none}
   <section class="vbm1-track">
     <h3>Alignment: Claiming My Rightful Place in the Universe</h3>
     <p class="vbm1-q">Why accept the darkness within yourself?</p>
-    <p class="vbm1-get">Accepting the shadow sides within yourself and other people does not mean becoming that darkness. It means becoming aware of it and illuminating it with your own inner light. As long as we deny, suppress, or fear our dark parts, they can always be "pulled" from the outside—these are the very energetic hooks through which we are manipulated and our choices are distorted.<br>This practice allows you to enter the "zero point," unite the experience of all your light and dark incarnations, and deprive external systems of any leverage over you. You will break destructive agreements, reclaim your scattered cosmic and earthly fractals, and shatter any illusory mirrors and domes of substitution between you and the Source, in order to activate the true core of consciousness and occupy your rightful, safe place in space.</p>
+    <p class="vbm1-get">Accepting the shadow sides within yourself and other people does not mean becoming that darkness. It means becoming aware of it and illuminating it with your own inner light. As long as we deny, suppress, or fear our dark parts, they can always be "pulled" from the outside—these are the very energetic hooks through which we are manipulated and our choices are distorted.<br>This practice allows you to enter the "zero point," unite the experience of all your light and dark incarnations, and deprive external systems of any leverage over you. You will break destructive agreements, reclaim your scattered cosmic and earthly fractals, and shatter any illusory mirrors and domes of substitution between you and the Source, in order to activate the true core of consciousness and occupy your rightful, safe place in space</p>
 
     <div class="vbm1-aud" data-src="https://audio.innerecode.space/2.Self-Love.mp3" data-title="Session" data-desc="Affirmation session" data-repeat="true"></div>
   </section>
 
   <!-- ===== MODULE COMPLETION ===== -->
   <section class="vbm1-track vbm1-end">
-    <span class="vbm1-lbl">Module 1 · Complete</span>
+    <span class="vbm1-lbl">Module 2 · Complete</span>
   </section>
 
 </div>
